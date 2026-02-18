@@ -1,0 +1,13 @@
+[workspace]
+authors = ["André Favalessa <andrefavalessa@gmail.com>"]
+channels = ["conda-forge"]
+name = "TRABALHO01"
+platforms = ["win-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = ">=3.14.3,<3.15"
+opencv = ">=4.13.0,<5"
+matplotlib = ">=3.10.8,<4"

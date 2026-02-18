@@ -1,0 +1,71 @@
+<PAMDataset>
+  <Metadata domain="xml:XMP" format="xml">
+    <?xpacket begin="&#xFEFF;" id="W5M0MpCehiHzreSzNTczkc9d"?>
+    <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.3-c011 66.145661, 2012/02/06-14:56:27        ">
+      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+        <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/">
+          <xmp:CreateDate>2013-11-01T16:01:23+01:00</xmp:CreateDate>
+          <xmp:ModifyDate>2014-01-19T11:44:35+01:00</xmp:ModifyDate>
+          <xmp:MetadataDate>2014-01-19T11:44:35+01:00</xmp:MetadataDate>
+          <xmp:CreatorTool>Adobe Photoshop CS6 (Windows)</xmp:CreatorTool>
+        </rdf:Description>
+        <rdf:Description rdf:about="" xmlns:dc="http://purl.org/dc/elements/1.1/">
+          <dc:format>image/tiff</dc:format>
+        </rdf:Description>
+        <rdf:Description rdf:about="" xmlns:photoshop="http://ns.adobe.com/photoshop/1.0/">
+          <photoshop:ColorMode>3</photoshop:ColorMode>
+        </rdf:Description>
+        <rdf:Description rdf:about="" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#">
+          <xmpMM:InstanceID>xmp.iid:06BB29B0F680E311BE29DB29D7218DDD</xmpMM:InstanceID>
+          <xmpMM:DocumentID>xmp.did:FDD79119B55DE311A93CEEF0C7513691</xmpMM:DocumentID>
+          <xmpMM:OriginalDocumentID>xmp.did:FDD79119B55DE311A93CEEF0C7513691</xmpMM:OriginalDocumentID>
+          <xmpMM:History>
+            <rdf:Seq>
+              <rdf:li rdf:parseType="Resource">
+                <stEvt:action>created</stEvt:action>
+                <stEvt:instanceID>xmp.iid:FDD79119B55DE311A93CEEF0C7513691</stEvt:instanceID>
+                <stEvt:when>2013-11-01T16:01:23+01:00</stEvt:when>
+                <stEvt:softwareAgent>Adobe Photoshop CS6 (Windows)</stEvt:softwareAgent>
+              </rdf:li>
+              <rdf:li rdf:parseType="Resource">
+                <stEvt:action>saved</stEvt:action>
+                <stEvt:instanceID>xmp.iid:06BB29B0F680E311BE29DB29D7218DDD</stEvt:instanceID>
+                <stEvt:when>2014-01-19T11:44:35+01:00</stEvt:when>
+                <stEvt:softwareAgent>Adobe Photoshop CS6 (Windows)</stEvt:softwareAgent>
+                <stEvt:changed>/</stEvt:changed>
+              </rdf:li>
+            </rdf:Seq>
+          </xmpMM:History>
+        </rdf:Description>
+      </rdf:RDF>
+    </x:xmpmeta>
+    <?xpacket end="w"?>
+  </Metadata>
+  <PAMRasterBand band="1">
+    <Metadata>
+      <MDI key="STATISTICS_MAXIMUM">255</MDI>
+      <MDI key="STATISTICS_MEAN">119.91778197865</MDI>
+      <MDI key="STATISTICS_MINIMUM">0</MDI>
+      <MDI key="STATISTICS_STDDEV">51.727256443007</MDI>
+      <MDI key="STATISTICS_VALID_PERCENT">100</MDI>
+    </Metadata>
+  </PAMRasterBand>
+  <PAMRasterBand band="2">
+    <Metadata>
+      <MDI key="STATISTICS_MAXIMUM">255</MDI>
+      <MDI key="STATISTICS_MEAN">77.114310584299</MDI>
+      <MDI key="STATISTICS_MINIMUM">0</MDI>
+      <MDI key="STATISTICS_STDDEV">29.87215107677</MDI>
+      <MDI key="STATISTICS_VALID_PERCENT">100</MDI>
+    </Metadata>
+  </PAMRasterBand>
+  <PAMRasterBand band="3">
+    <Metadata>
+      <MDI key="STATISTICS_MAXIMUM">255</MDI>
+      <MDI key="STATISTICS_MEAN">80.266874817868</MDI>
+      <MDI key="STATISTICS_MINIMUM">0</MDI>
+      <MDI key="STATISTICS_STDDEV">31.414705755366</MDI>
+      <MDI key="STATISTICS_VALID_PERCENT">100</MDI>
+    </Metadata>
+  </PAMRasterBand>
+</PAMDataset>
