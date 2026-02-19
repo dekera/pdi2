@@ -94,17 +94,17 @@ plt.figure(figsize=(12, 4))  # figura
 
 plt.subplot(1, 3, 1)  # H
 plt.imshow(H_lido, cmap="gray")  # mostra H salvo
-plt.title("H")  # título
+plt.title("Canal H")  # título
 plt.axis("off")  # sem eixo
 
 plt.subplot(1, 3, 2)  # S
 plt.imshow(S_lido, cmap="gray")  # mostra S salvo
-plt.title("S")  # título
+plt.title("Canal S")  # título
 plt.axis("off")  # sem eixo
 
 plt.subplot(1, 3, 3)  # I
 plt.imshow(I_lido, cmap="gray")  # mostra I salvo
-plt.title("I")  # título
+plt.title("Canal I")  # título
 plt.axis("off")  # sem eixo
 
 plt.tight_layout()  # ajusta
