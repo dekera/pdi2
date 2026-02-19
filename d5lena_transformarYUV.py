@@ -51,7 +51,7 @@ cv2.imwrite(os.path.join(pasta_saida, "imagem_YUV.png"), imagem_yuv)
 print("d.5 concluído: canais Y, U, V e imagem_YUV.png (3 canais) salvos em 'canaisYUV_lena'.")
 
 # 8) Plotar os canais (visualmente úteis)
-plt.figure(figsize=(12, 4))
+plt.figure(figsize=(12, 5))
 
 plt.subplot(1, 3, 1)
 plt.imshow(Y_8bit, cmap="gray")

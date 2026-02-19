@@ -36,7 +36,7 @@ m = 255 - g
 y = 255 - b
 
 # 7) Plotar canais CMY
-plt.figure(figsize=(12, 4))
+plt.figure(figsize=(12, 5))
 
 plt.subplot(1, 3, 1)
 plt.imshow(c, cmap="gray")

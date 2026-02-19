@@ -92,10 +92,11 @@ I_lido = cv2.imread(caminho_I, cv2.IMREAD_GRAYSCALE)  # lê I salvo
 
 plt.figure(figsize=(12, 4))  # figura
 
-plt.subplot(1, 3, 1)  # H
-plt.imshow(H_lido, cmap="gray")  # mostra H salvo
+plt.subplot(1, 3, 1)  # H (colorido)
+plt.imshow(H, cmap="hsv", vmin=0.0, vmax=360.0)  # mapeia 0..360 no círculo HSV
 plt.title("Canal H")  # título
 plt.axis("off")  # sem eixo
+plt.colorbar(fraction=0.046, pad=0.04)  # barra de cores 
 
 plt.subplot(1, 3, 2)  # S
 plt.imshow(S_lido, cmap="gray")  # mostra S salvo

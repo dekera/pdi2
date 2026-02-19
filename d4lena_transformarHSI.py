@@ -143,10 +143,11 @@ if __name__ == "__main__":
     # Plotar lado a lado
     plt.figure(figsize=(12,5))
 
-    plt.subplot(1,3,1)
-    plt.imshow(H, cmap='gray')
-    plt.title("Canal H")
-    plt.axis("off")
+    plt.subplot(1, 3, 1)  # H (colorido)
+    plt.imshow(H, cmap="hsv", vmin=0.0, vmax=360.0)  # mapeia 0..360 no círculo HSV
+    plt.title("Canal H")  # título
+    plt.axis("off")  # sem eixo
+    plt.colorbar(fraction=0.046, pad=0.04)  # barra de cores
 
     plt.subplot(1,3,2)
     plt.imshow(S, cmap='gray')
