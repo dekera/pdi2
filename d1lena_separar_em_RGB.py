@@ -49,7 +49,45 @@ plt.title("Canal B")
 plt.axis("off")
 
 plt.tight_layout()           # ajusta espaçamentos automaticamente
-plt.show()                   # exibe a figura na tela
+
+# Histograma
+plt.figure(figsize=(8, 5))  # cria nova figura para histograma
+
+plt.hist(
+    r.flatten(),  # transforma matriz 2D em vetor 1D
+    bins=256,  # 256 níveis digitais
+    range=(0, 255),  # intervalo completo 8 bits
+    color="red",  # cor da curva
+    alpha=0.5,  # transparência
+    label="Canal R"  # legenda
+)
+
+plt.hist(
+    g.flatten(),  # vetor 1D
+    bins=256,
+    range=(0, 255),
+    color="green",
+    alpha=0.5,
+    label="Canal G"
+)
+
+plt.hist(
+    b.flatten(),
+    bins=256,
+    range=(0, 255),
+    color="blue",
+    alpha=0.5,
+    label="Canal B"
+)
+
+plt.title("Histograma dos Canais RGB - png")  # título
+plt.xlabel("Nível Digital (0–255)")  # eixo X
+plt.ylabel("Frequência")  # eixo Y
+plt.legend()  # mostra legenda
+plt.grid(alpha=0.3)  # grade leve
+
+plt.tight_layout()  # ajusta layout
+plt.show()  # exibe
 
 # 8) Salvar os canais separados em arquivos
 # Obs: para salvar corretamente, usamos PNG (8-bit), então garantimos dtype uint8

@@ -32,8 +32,45 @@ plt.title("Canal B")  # título
 plt.axis("off")  # remove eixos
 
 plt.tight_layout()  # ajusta layout
-plt.show()  # exibe
 
+# Histograma
+plt.figure(figsize=(8, 5))  # cria nova figura para histograma
+
+plt.hist(
+    r.flatten(),  # transforma matriz 2D em vetor 1D
+    bins=256,  # 256 níveis digitais
+    range=(0, 255),  # intervalo completo 8 bits
+    color="red",  # cor da curva
+    alpha=0.5,  # transparência
+    label="Canal R"  # legenda
+)
+
+plt.hist(
+    g.flatten(),  # vetor 1D
+    bins=256,
+    range=(0, 255),
+    color="green",
+    alpha=0.5,
+    label="Canal G"
+)
+
+plt.hist(
+    b.flatten(),
+    bins=256,
+    range=(0, 255),
+    color="blue",
+    alpha=0.5,
+    label="Canal B"
+)
+
+plt.title("Histograma dos Canais RGB - GeoTIFF")  # título
+plt.xlabel("Nível Digital (0–255)")  # eixo X
+plt.ylabel("Frequência")  # eixo Y
+plt.legend()  # mostra legenda
+plt.grid(alpha=0.3)  # grade leve
+
+plt.tight_layout()  # ajusta layout
+plt.show()  # exibe
 caminho_r = os.path.join(pasta_saida, "canal_R.png")  # saída R
 caminho_g = os.path.join(pasta_saida, "canal_G.png")  # saída G
 caminho_b = os.path.join(pasta_saida, "canal_B.png")  # saída B
