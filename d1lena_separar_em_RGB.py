@@ -31,7 +31,7 @@ img_rgb = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2RGB)  # converte para RGB (padrão
 r, g, b = cv2.split(img_rgb)  # separa em 3 matrizes 2D (cada uma = um canal)
 
 # 7) Plotar os canais separados
-plt.figure(figsize=(12, 4))  # cria uma figura com tamanho adequado
+plt.figure(figsize=(12, 5))  # cria uma figura com tamanho adequado
 
 plt.subplot(1, 3, 1)         # 1 linha, 3 colunas, posição 1
 plt.imshow(r, cmap="gray")   # mostra o canal R como imagem em tons de cinza
