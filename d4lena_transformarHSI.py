@@ -4,8 +4,7 @@ import numpy as np
 import math
 import matplotlib.pyplot as plt
 
-# ============================================================
-# VERSÃO CORRIGIDA (PIXEL A PIXEL, DIDÁTICA) - RGB/BGR -> HSI
+# PIXEL A PIXEL - RGB/BGR -> HSI
 #
 # Fórmulas da literatura (com R,G,B em [0,1]):
 #   I = (R + G + B) / 3
@@ -18,7 +17,6 @@ import matplotlib.pyplot as plt
 # - Se denominador do H == 0 -> H = 0 (H indefinido quando S=0 / tons de cinza)
 # - Clamp do argumento do acos para [-1, 1] (evita erro numérico)
 # - Retorna H em graus [0,360], S e I em [0,1]
-# ============================================================
 
 
 def bgr_para_hsi(img_bgr):
@@ -45,14 +43,10 @@ def bgr_para_hsi(img_bgr):
             g = float(G[i, j])
             b = float(B[i, j])
 
-            # --------------------------
             # Intensidade: I = (R+G+B)/3
-            # --------------------------
             I[i, j] = (r + g + b) / 3.0
 
-            # --------------------------
             # Saturação: S = 1 - (3*min)/(R+G+B)
-            # --------------------------
             soma = r + g + b
             if soma == 0.0:
                 # pixel preto: saturação definida como 0
@@ -61,11 +55,9 @@ def bgr_para_hsi(img_bgr):
                 minimo = min(r, g, b)
                 S[i, j] = 1.0 - (3.0 * minimo / soma)
 
-            # --------------------------
             # Matiz (Hue):
             #   H = arccos( num / den )
             #   se B > G -> H = 360 - H
-            # --------------------------
             num = (r - g) + (r - b)
             den = 2.0 * math.sqrt((r - g) ** 2 + (r - b) * (g - b))
 
@@ -96,24 +88,24 @@ def bgr_para_hsi(img_bgr):
 
 if __name__ == "__main__":
 
-    # -------- 1) Caminhos --------
+    # 1) Caminhos
     caminho_imagem = "lena-Color.png"
     pasta_saida = "canaisHSI_lena"
     os.makedirs(pasta_saida, exist_ok=True)
 
-    # -------- 2) Ler imagem --------
+    # 2) Ler imagem
     img_bgr = cv2.imread(caminho_imagem)
     if img_bgr is None:
         raise FileNotFoundError(f"Não foi possível ler a imagem: {caminho_imagem}")
 
-    # -------- 3) Converter BGR -> HSI  (pixel a pixel) e salvar imagem hsi --------
+    # 3) Converter BGR -> HSI  (pixel a pixel) e salvar imagem hsi
     H, S, I = bgr_para_hsi(img_bgr)
     
     hsi_img = cv2.merge((H, S, I))
 
     cv2.imwrite("canaisHSI_lena/imagem_HSI.tiff", hsi_img)
 
-    # -------- 4) Preparar para salvar em PNG (8-bit) --------
+    # 4) Preparar para salvar em PNG (8-bit)
     # H: 0..360 -> 0..255
     # S: 0..1   -> 0..255
     # I: 0..1   -> 0..255
@@ -121,7 +113,7 @@ if __name__ == "__main__":
     S_8bit = (S * 255.0).astype(np.uint8)
     I_8bit = (I * 255.0).astype(np.uint8)
 
-    # -------- 5) Salvar canais --------
+    # 5) Salvar canais
     caminho_H = os.path.join(pasta_saida, "canal_H.png")
     caminho_S = os.path.join(pasta_saida, "canal_S.png")
     caminho_I = os.path.join(pasta_saida, "canal_I.png")
@@ -134,7 +126,7 @@ if __name__ == "__main__":
 
     cv2.imwrite("canaisHSI_lena/imagem_8bit_HSI.png", hsi_img)
 
-    # -------- 6) Relatório rápido --------
+    # 6) Relatório rápido
     print("HSI (pixel a pixel) concluído e salvo.")
     print(f"- {caminho_H}")
     print(f"- {caminho_S}")

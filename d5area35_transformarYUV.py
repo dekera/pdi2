@@ -30,7 +30,7 @@ Y_8bit = np.clip(Y, 0, 255).astype(np.uint8)  # Y em 8-bit
 U_8bit = np.clip(U_digital, 0, 255).astype(np.uint8)  # U em 8-bit
 V_8bit = np.clip(V_digital, 0, 255).astype(np.uint8)  # V em 8-bit
 
-# ✅ Montar a imagem YUV 3 canais (Y,U,V)
+# Montar a imagem YUV 3 canais (Y,U,V)
 imagem_yuv = cv2.merge((Y_8bit, U_8bit, V_8bit))  # merge YUV
 
 cv2.imwrite(os.path.join(pasta_saida, "canal_Y.png"), Y_8bit)  # salva canal Y
